@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"strings" // Bu satırı ekleyin
 
 	speech "cloud.google.com/go/speech/apiv1"
 	"cloud.google.com/go/speech/apiv1/speechpb"
@@ -82,10 +83,13 @@ func (sc *SpeechClient) StreamingRecognize(ctx context.Context, audioPath string
 			}
 		}
 	}()
-	
-	var transcripts []string
+
+	// --- DÜZELTME BAŞLANGICI ---
+
+	var transcriptBuilder strings.Builder // 'transcripts' dizisi yerine 'strings.Builder' kullanmak daha verimli
 	var allWords []models.WordInfo
-	
+	var lastEndTime float64 = 0 // timeOffset'i kaldırıp sadece son bitiş zamanını takip et
+
 	for {
 		resp, err := stream.Recv()
 		if err == io.EOF {
@@ -98,25 +102,40 @@ func (sc *SpeechClient) StreamingRecognize(ctx context.Context, audioPath string
 		for _, result := range resp.Results {
 			if result.IsFinal {
 				alternative := result.Alternatives[0]
-				transcripts = append(transcripts, alternative.Transcript)
 				
+				// Transkripti ekle
+				transcriptBuilder.WriteString(alternative.Transcript + " ")
+
+				// Kelime listesini işle
 				for _, wordInfo := range alternative.Words {
-					allWords = append(allWords, models.WordInfo{
-						Word: wordInfo.Word,
-						StartTime: float64(wordInfo.StartTime.Seconds) + float64(wordInfo.StartTime.Nanos)/1e9,
-						EndTime:   float64(wordInfo.EndTime.Seconds) + float64(wordInfo.EndTime.Nanos)/1e9,
-						Confidence: float64(wordInfo.Confidence),
-						SpeakerTag: wordInfo.SpeakerTag,
-					})
+					startTime := float64(wordInfo.StartTime.Seconds) + float64(wordInfo.StartTime.Nanos)/1e9
+					endTime := float64(wordInfo.EndTime.Seconds) + float64(wordInfo.EndTime.Nanos)/1e9
+
+					// **ASIL DÜZELTME BURADA:**
+					// Sadece, zaman damgası bir önceki kelimenin bitişinden
+					// *sonra* olan kelimeleri ekle. Bu, örtüşmeyi (overlap) engeller.
+					if startTime >= lastEndTime {
+						allWords = append(allWords, models.WordInfo{
+							Word:       wordInfo.Word,
+							StartTime:  startTime, // Artık 'adjustedStartTime'a gerek yok
+							EndTime:    endTime,   // Artık 'adjustedEndTime'a gerek yok
+							Confidence: float64(wordInfo.Confidence),
+							SpeakerTag: wordInfo.SpeakerTag,
+						})
+						
+						// Son bitiş zamanını sadece *eklenen* kelimenin bitiş zamanıyla güncelle
+						lastEndTime = endTime
+					}
+					// 'else' durumu (startTime < lastEndTime) basitçe atlanır,
+					// çünkü bu bir örtüşmedir ve kelime zaten 'allWords' içinde vardır.
 				}
 			}
 		}
 	}
+	
+	fullTranscript := strings.TrimSpace(transcriptBuilder.String())
 
-	fullTranscript := ""
-	for _, t := range transcripts {
-		fullTranscript += t + " "
-	}
+	// --- DÜZELTME SONU ---
 
 	return &models.TranscriptionResult{
 		Transcript:   fullTranscript,

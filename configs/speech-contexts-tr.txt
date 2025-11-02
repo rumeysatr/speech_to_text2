@@ -23,6 +23,7 @@ cache
 caching
 nginx
 server
+etcd
 
 # DevOps & Deployment
 deployment
@@ -400,3 +401,14 @@ Yoda Conditions
 Menü
 API'den
 API'de
+sched
+kubelet
+k-proxy
+provider
+c-m
+pod
+pull
+bin
+dizin
+path
+metadata
