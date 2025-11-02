@@ -1,6 +1,6 @@
-# Konuşmadan Metne Dönüştürme Aracı (spt2)
+# Speech-to-Text Dönüştürme Aracı (spt2)
 
-Bu araç, ses dosyalarını Google Cloud Speech-to-Text API'sini kullanarak metne dönüştürür. Sonuçları JSON, SRT altyazı ve düz metin (TXT) formatlarında dışa aktarır.
+Bu araç, ses dosyalarını Google Cloud Speech-to-Text API'ını kullanarak metne dönüştürür. Sonuçları JSON, SRT altyazı ve düz metin (TXT) formatlarında dışa aktarır.
 
 ## **Önemli Not**
 
