@@ -9,7 +9,7 @@ import (
 	speech "cloud.google.com/go/speech/apiv1"
 	"cloud.google.com/go/speech/apiv1/speechpb"
 	"google.golang.org/api/option"
-	"speech_to_text2/internal/config"
+	"spt2/internal/config"
 )
 
 func main() {

@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
-	"speech_to_text2/internal/config"
-	"speech_to_text2/pkg/models"
+	"spt2/internal/config"
+	"spt2/pkg/models"
 )
 
 func main() {

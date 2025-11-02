@@ -84,6 +84,8 @@ func (sc *SpeechClient) StreamingRecognize(ctx context.Context, audioPath string
 	}()
 	
 	var transcripts []string
+	var allWords []models.WordInfo
+	
 	for {
 		resp, err := stream.Recv()
 		if err == io.EOF {
@@ -95,7 +97,18 @@ func (sc *SpeechClient) StreamingRecognize(ctx context.Context, audioPath string
 
 		for _, result := range resp.Results {
 			if result.IsFinal {
-				transcripts = append(transcripts, result.Alternatives[0].Transcript)
+				alternative := result.Alternatives[0]
+				transcripts = append(transcripts, alternative.Transcript)
+				
+				for _, wordInfo := range alternative.Words {
+					allWords = append(allWords, models.WordInfo{
+						Word: wordInfo.Word,
+						StartTime: float64(wordInfo.StartTime.Seconds) + float64(wordInfo.StartTime.Nanos)/1e9,
+						EndTime:   float64(wordInfo.EndTime.Seconds) + float64(wordInfo.EndTime.Nanos)/1e9,
+						Confidence: float64(wordInfo.Confidence),
+						SpeakerTag: wordInfo.SpeakerTag,
+					})
+				}
 			}
 		}
 	}
@@ -106,8 +119,9 @@ func (sc *SpeechClient) StreamingRecognize(ctx context.Context, audioPath string
 	}
 
 	return &models.TranscriptionResult{
-		FullTranscript: fullTranscript,
-		Language: recognitionConfig.LanguageCode,
+		Transcript:   fullTranscript,
+		LanguageCode: recognitionConfig.LanguageCode,
+		Words:        allWords,
 	}, nil
 
 }

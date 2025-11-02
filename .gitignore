@@ -1,0 +1,37 @@
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+
+# Credentials (ÖNEMLİ!)
+*.json
+!configs/*.json
+credentials/
+secrets/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+*.tmp
+
+# Build artifacts
+build/
+dist/
+
+
+adımlarVs/
+-p/
+docs/
+transcript/
+go.mod
+go.sum
+.roo/

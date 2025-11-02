@@ -1,6 +1,3 @@
-decision
-approval
 rejection
-postponed
-urgent
 critical
+important

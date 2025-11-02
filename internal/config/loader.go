@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"speech_to_text2/pkg/models"
+	"spt2/pkg/models"
 
 	"github.com/go-playground/validator/v10"
 	"github.com/spf13/viper"

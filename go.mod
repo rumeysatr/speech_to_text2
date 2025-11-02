@@ -1,4 +1,4 @@
-module speech_to_text2
+module spt2
 
 go 1.24.0
 

@@ -28,6 +28,7 @@ type AppConfig struct {
     // KRİTİK: Yapısal Veri Elde Etme (Prompt.md'de zorunlu!)
     EnableAutomaticPunctuation bool `mapstructure:"enable_automatic_punctuation" validate:"required,eq=true"`
     EnableWordTimeOffsets      bool `mapstructure:"enable_word_time_offsets" validate:"required,eq=true"`
+    EnableWordConfidence       bool `mapstructure:"enable_word_confidence"`
     
     // API Ekstra Ayarlar
     MinConfidence   float64 `mapstructure:"min_confidence" validate:"omitempty,min=0,max=1"`

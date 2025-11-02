@@ -1,6 +1,7 @@
-karar
-onay
-red
-erteleme
+önemli
 acil
-kritik
+sınav
+vize
+final
+soru
+
