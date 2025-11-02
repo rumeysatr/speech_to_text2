@@ -46,6 +46,7 @@ func LoadConfig(path string) (*models.AppConfig, error) {
 	viper.SetDefault("generate_txt", true)
 	viper.SetDefault("enable_logging", true)
 	viper.SetDefault("log_level", "info")
+	viper.SetDefault("gcs_bucket", "") // Varsayılan olarak boş bırak, `required` validation bunu yakalayacak
 
 	// --- BÖLÜM 2: VIPER İLE CONFIG DOSYASI YÜKLEME ---
 

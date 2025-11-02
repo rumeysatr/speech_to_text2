@@ -2,21 +2,25 @@ package main
 
 import (
 	"context"
+	"flag"
 	"fmt"
 	"log"
-	"os"
-	
+
 	"spt2/internal/audio"
 	"spt2/internal/config"
 	"spt2/internal/output"
 	"spt2/internal/speechclient"
+	"spt2/internal/storage"
 )
 
 func main() {
-	if len(os.Args) < 2 {
-		log.Fatal("Kullanım: go run cmd/main.go ../speeches/")
+	configPath := flag.String("config", "configs/default.json", "Path to the configuration file.")
+	flag.Parse()
+
+	if len(flag.Args()) < 1 {
+		log.Fatal("Kullanım: go run cmd/main.go [options] <audio_file_path>")
 	}
-	audioFilePath := os.Args[1]
+	audioFilePath := flag.Arg(0)
 
 	fmt.Println("=== Google Cloud Speech-to-Text Deşifre Sistemi ===\n")
 	fmt.Printf("Ses Dosyası: %s\n\n", audioFilePath)
@@ -24,7 +28,7 @@ func main() {
 	ctx := context.Background()
 
 	fmt.Println("📄 Config yükleniyor...")
-	cfg, err := config.LoadConfig("./configs/default.json")
+	cfg, err := config.LoadConfig(*configPath)
 	if err != nil {
 		log.Fatalf("Config yüklenemedi: %v", err)
 	}
@@ -51,10 +55,18 @@ func main() {
 	}
 	fmt.Printf("✅ FLAC'e dönüştürüldü: %s\n\n", metadata.ConvertedPath)
 
+	// GCS'ye yükle
+	fmt.Println("☁️  FLAC dosyası Google Cloud Storage'a yükleniyor...")
+	gcsURI, err := storage.UploadToGCS(ctx, metadata.ConvertedPath, cfg.GCSBucket, cfg.GoogleCredentialsPath)
+	if err != nil {
+		log.Fatalf("GCS'ye yükleme hatası: %v", err)
+	}
+	fmt.Printf("✅ Dosya GCS'ye yüklendi: %s\n\n", gcsURI)
+
 	//recognitionConfig
 	fmt.Println("⚙️  Google API konfigürasyonu oluşturuluyor...")
 	recognitionConfig := speechclient.BuildRecognitionConfig(cfg)
-	fmt.Printf("✅ RecognitionConfig hazır (Dil: %s, Sample Rate: %d Hz)\n\n",  recognitionConfig.LanguageCode, recognitionConfig.SampleRateHertz)
+	fmt.Printf("✅ RecognitionConfig hazır (Dil: %s, Sample Rate: %d Hz)\n\n", recognitionConfig.LanguageCode, recognitionConfig.SampleRateHertz)
 
 	//speech client başlatma
 	fmt.Println("🔌 Google Speech API'a bağlanılıyor...")
@@ -65,9 +77,9 @@ func main() {
 	defer client.Close()
 	fmt.Println("✅ Google Speech API bağlantısı kuruldu\n")
 
-	//streaming recognize
+	//long running recognize
 	fmt.Println("🎤 Ses dosyası deşifre ediliyor (bu birkaç dakika sürebilir)...")
-	result, err := client.StreamingRecognize(ctx, metadata.ConvertedPath, recognitionConfig)
+	result, err := client.LongRunningRecognize(ctx, gcsURI, recognitionConfig)
 	if err != nil {
 		log.Fatalf("Deşifre hatası: %v", err)
 	}

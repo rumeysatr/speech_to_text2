@@ -1,6 +1,7 @@
 {
   "google_credentials_path": "./speech-key.json/speech-to-text-476419-680304a32dcc.json",
   "project_id": "speech-to-text-476419",
+  "gcs_bucket": "speech-to-text-temp-files",
   
   "language_code": "en-US",
   "model": "default",

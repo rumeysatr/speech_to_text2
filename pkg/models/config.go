@@ -5,6 +5,7 @@ type AppConfig struct {
     // Google Cloud Ayarları
     GoogleCredentialsPath string `mapstructure:"google_credentials_path" validate:"required,file"`
     ProjectID             string `mapstructure:"project_id" validate:"required"`
+    GCSBucket             string `mapstructure:"gcs_bucket" validate:"required"`
     
     // API Temel Ayarları
     LanguageCode string `mapstructure:"language_code" validate:"required,oneof=en-US en-GB tr-TR de-DE fr-FR es-ES"`
