@@ -1,0 +1,612 @@
+action item
+budget approval
+meeting
+deadline
+quarterly report
+stakeholder
+revenue
+expenditure
+# English Software and Programming Terms
+# One term per line, lines starting with # are comments
+
+# General Programming
+API
+backend
+frontend
+full stack
+database
+cache
+caching
+memory
+storage
+nginx
+MariaDB
+root
+ignore
+endpoint
+entrypoint
+
+
+# DevOps & Deployment
+deployment
+continuous integration
+continuous delivery
+CI/CD
+pipeline
+Docker
+Kubernetes
+container
+containerization
+microservice
+microservices
+monolith
+orchestration
+
+# Web Technologies
+REST API
+RESTful
+GraphQL
+WebSocket
+HTTP
+HTTPS
+JSON
+XML
+AJAX
+SOAP
+gRPC
+
+# Authentication & Security
+authentication
+authorization
+OAuth
+JWT
+JSON Web Token
+token
+session
+cookie
+CORS
+SSL
+TLS
+encryption
+hashing
+salting
+
+# Frameworks & Libraries
+framework
+library
+middleware
+plugin
+extension
+package
+module
+component
+
+# Programming Languages
+JavaScript
+TypeScript
+Python
+Go
+Golang
+Java
+C++
+C sharp
+C#
+Ruby
+PHP
+Rust
+Kotlin
+Swift
+Dart
+
+# Frontend Frameworks
+React
+Vue
+Angular
+Svelte
+Next.js
+Nuxt.js
+Gatsby
+Remix
+SolidJS
+
+# Backend Frameworks
+Node.js
+Express
+FastAPI
+Django
+Flask
+Spring Boot
+Laravel
+Rails
+ASP.NET
+
+# Databases
+MongoDB
+PostgreSQL
+MySQL
+Redis
+Elasticsearch
+Cassandra
+DynamoDB
+SQLite
+MariaDB
+Oracle
+CouchDB
+
+# Cloud & Hosting
+AWS
+Amazon Web Services
+Azure
+Microsoft Azure
+Google Cloud
+GCP
+cloud computing
+serverless
+lambda function
+EC2
+S3
+CloudFront
+Heroku
+Vercel
+Netlify
+
+# Version Control
+Git
+GitHub
+GitLab
+Bitbucket
+repository
+repo
+commit
+push
+pull
+merge
+branch
+rebase
+cherry pick
+stash
+pull request
+PR
+merge conflict
+
+# Testing
+unit test
+integration test
+end-to-end test
+E2E test
+test coverage
+mock
+stub
+spy
+TDD
+test driven development
+BDD
+behavior driven development
+Jest
+Mocha
+Chai
+Cypress
+Selenium
+
+# Code Quality
+refactoring
+code review
+debugging
+linting
+formatting
+best practices
+clean code
+code smell
+technical debt
+static analysis
+
+# Agile & PM
+Agile
+Scrum
+Kanban
+sprint
+backlog
+user story
+epic
+task
+bug
+feature
+ticket
+standup
+retrospective
+JIRA
+Trello
+
+# Build Tools & Bundlers
+webpack
+vite
+rollup
+parcel
+esbuild
+babel
+transpiler
+compiler
+bundler
+minification
+
+# Architecture & Patterns
+design pattern
+singleton
+factory
+observer
+decorator
+strategy
+MVC
+MVVM
+MVP
+clean architecture
+hexagonal architecture
+event driven
+CQRS
+event sourcing
+
+# Programming Paradigms
+OOP
+object oriented programming
+functional programming
+procedural programming
+declarative
+imperative
+reactive programming
+
+# Async & Concurrency
+async
+asynchronous
+synchronous
+callback
+promise
+async await
+event loop
+thread
+process
+coroutine
+goroutine
+concurrency
+parallelism
+microservice
+microservices
+PostgreSQL
+Postgre
+server
+
+# Performance & Optimization
+performance
+optimization
+scalability
+load balancing
+caching strategy
+lazy loading
+code splitting
+tree shaking
+memoization
+debouncing
+throttling
+
+# Data Structures & Algorithms
+array
+linked list
+stack
+queue
+hash table
+binary tree
+graph
+sorting algorithm
+searching algorithm
+recursion
+dynamic programming
+big O notation
+
+# API & Integration
+RESTful API
+GraphQL API
+webhook
+API gateway
+rate limiting
+pagination
+serialization
+deserialization
+
+# Development Practices
+pair programming
+code review
+continuous refactoring
+documentation
+commenting
+naming conventions
+version control
+branching strategy
+
+# Memory Management
+memory leak
+garbage collection
+reference counting
+heap
+stack
+pointer
+memory allocation
+
+# Error Handling
+exception
+try catch
+error handling
+logging
+debugging
+stack trace
+breakpoint
+
+# Networking
+HTTP request
+HTTP response
+status code
+header
+payload
+localhost
+port
+IP address
+DNS
+CDN
+
+# Mobile Development
+React Native
+Flutter
+Xamarin
+native app
+hybrid app
+PWA
+progressive web app
+
+# DevOps Tools
+Jenkins
+GitHub Actions
+GitLab CI
+CircleCI
+Travis CI
+Terraform
+Ansible
+Puppet
+Chef
+
+# Monitoring & Logging
+monitoring
+logging
+metrics
+alerting
+APM
+application performance monitoring
+Prometheus
+Grafana
+ELK stack
+Elasticsearch
+Logstash
+Kibana
+
+# Security
+penetration testing
+vulnerability
+OWASP
+SQL injection
+XSS
+cross site scripting
+CSRF
+cross site request forgery
+security audit
+
+# Package Managers
+npm
+yarn
+pip
+composer
+Maven
+Gradle
+NuGet
+
+# Other Important Terms
+open source
+dependency
+package manager
+build tool
+runtime
+polyfill
+shim
+boilerplate
+scaffold
+template
+CLI
+command line interface
+GUI
+graphical user interface
+SDK
+software development kit
+IDE
+integrated development environment
+VSCode
+Visual Studio Code
+AI
+MCP
+LLM
+api key
+polymorphism
+inheritance
+Cpp
+### Veri Bilimi ve Makine Öğrenimi (Data Science & Machine Learning)
+Algorithm
+Artificial Intelligence (AI)
+Big Data
+Classification
+Clustering
+Computer Vision
+Cross Validation
+Data Mining
+Data Science
+Deep Learning
+Decision Trees
+Dimensionality Reduction
+Feature Engineering
+Generative AI
+Hyperparameter
+Large Language Models (LLMs)
+Machine Learning (ML)
+Model
+Natural Language Processing (NLP)
+Neural Networks
+Overfitting
+Predictive Analytics
+Regression
+Reinforcement Learning
+Regularization
+Supervised Learning
+Support Vector Machines (SVM)
+Training Data
+Test Data
+Underfitting
+Unsupervised Learning
+Validation
+
+### Kullanıcı Arayüzü ve Kullanıcı Deneyimi (UI/UX Design)
+A/B Testing
+Accessibility
+Adaptive Design
+Card Sorting
+Cognitive Load
+Color Theory
+Fitts's Law
+Flat Design
+Grid System
+Hick's Law
+Information Architecture (IA)
+Interaction Design (IxD)
+Jakob's Law
+Material Design
+Microinteractions
+Mobile-First Design
+Onboarding
+Prototype
+Responsive Design
+Sitemap
+Skeuomorphism
+Typography
+Usability
+User Experience (UX)
+User Flow
+User Interface (UI)
+User Journey
+User Persona
+User Research
+Wireframe
+
+### Siber Güvenlik ve Ağ (Cybersecurity & Networking)
+Cryptography
+Decryption
+Denial of Service (DoS)
+Digital Signature
+DNS (Domain Name System)
+Encryption
+Firewall
+Intrusion Detection System (IDS)
+Intrusion Prevention System (IPS)
+IP Address
+LAN (Local Area Network)
+MAC Address
+Malware
+OSI Model
+Packet
+Penetration Testing
+Phishing
+Port
+Proxy Server
+Router
+Switch
+TCP/IP
+VPN (Virtual Private Network)
+Vulnerability
+WAN (Wide Area Network)
+Zero-Day Exploit
+
+### Yazılım Geliştirme Yaşam Döngüsü (SDLC) ve Kalite Güvencesi (QA)
+Abstraction
+Acceptance Testing
+Alpha Testing
+Beta Testing
+Cohesion
+Coupling
+Encapsulation
+General Availability (GA)
+Gold Master (GM) / Release to Manufacturing (RTM)
+Legacy Code
+Maintenance
+Modularity
+Performance Testing
+Quality Assurance (QA)
+Regression Testing
+Release Candidate
+Requirements Engineering
+Reusability
+Software Architecture
+Software Development Life Cycle (SDLC)
+Stable Release
+System Integration Testing (SIT)
+User Acceptance Testing (UAT)
+
+### Programlama ve Bilgisayar Biliminin Temelleri
+Argument
+Binary Code
+Class
+Command-Line Interface (CLI)
+Compiler
+Data Structures
+Executable Code
+Hardcoding
+High-Level Language
+Interpreter
+Low-Level Language
+Machine Code
+Markup Language
+Method
+Object
+Open Source
+Operating System
+Parameter
+Pseudocode
+Scripting Language
+Source Code
+Terminal
+Variable
+
+### Eğlenceli ve Argo Terimler (Fun & Slang)
+Banana banana banana
+Common Law Feature
+Egyptian Brackets
+Higgs-Bugson
+Hindenbug
+Hooker code
+Hydra Code
+Jenga Code
+Jimmy
+Loch Ness Monster Bug
+Mad girlfriend bug
+Rubberducking
+Smug Report
+Unicorny
+Yoda Conditions
+.com
+dotcom
+SOAP
+Roadmap
+Well
+we're
+GPT
+Claude
+cloud
+gemini
+k8s
+cluster
+control plane
+node
+cli
+IT
+image

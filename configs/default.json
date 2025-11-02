@@ -1,0 +1,36 @@
+{
+  "google_credentials_path": "./speech-key.json/speech-to-text-476419-680304a32dcc.json",
+  "project_id": "speech-to-text-476419",
+  
+  "language_code": "en-US",
+  "model": "default",
+  "use_enhanced": false,
+  
+  "enable_diarization": true,
+  "min_speakers": 1,
+  "max_speakers": 6,
+  
+  "speech_contexts_file": "./configs/speech-contexts-en.txt",
+  "boost_value": 10.0,
+  
+  "enable_automatic_punctuation": true,
+  "enable_word_time_offsets": true,
+  
+  "min_confidence": 0.7,
+  "max_alternatives": 1,
+  "profanity_filter": false,
+  
+  "target_sample_rate": 16000,
+  "convert_to_mono": true,
+  "chunk_size": 4096,
+  
+  "output_dir": "./output",
+  "generate_json": true,
+  "generate_srt": true,
+  "generate_txt": true,
+  
+  "keywords_file": "./configs/keywords-en.txt",
+  
+  "enable_logging": true,
+  "log_level": "info"
+}

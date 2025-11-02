@@ -1,0 +1,402 @@
+aksiyon maddesi
+bütçe onayı
+toplantı
+son teslim tarihi
+çeyrek raporu
+paydaş
+gelir
+gider
+# Türkçe Yazılım ve Programlama Terimleri
+# Her satırda bir terim, # ile başlayan satırlar yorum satırıdır
+
+# Genel Programlama
+API
+Frontend
+endpoint
+backend
+frontend
+full stack
+veritabanı
+database
+cache
+önbellek
+caching
+nginx
+server
+
+# DevOps & Deployment
+deployment
+continuous integration
+sürekli entegrasyon
+continuous delivery
+CI/CD
+pipeline
+Docker
+Kubernetes
+container
+containerization
+mikroservis
+microservice
+monolith
+
+# Web Teknolojileri
+REST API
+RESTful
+GraphQL
+WebSocket
+HTTP
+HTTPS
+JSON
+XML
+AJAX
+
+# Kimlik Doğrulama & Güvenlik
+authentication
+kimlik doğrulama
+authorization
+yetkilendirme
+OAuth
+JWT
+token
+session
+cookie
+CORS
+
+# Framework & Kütüphaneler
+framework
+çatı
+library
+kütüphane
+middleware
+ara katman
+plugin
+extension
+cloudflare
+
+# Programlama Dilleri
+JavaScript
+TypeScript
+Python
+Go
+Golang
+Java
+C++
+C sharp
+Ruby
+PHP
+Rust
+C#
+dotNet
+.Net
+
+# Frontend Frameworks
+React
+Vue
+Angular
+Svelte
+Next.js
+Nuxt.js
+Gatsby
+
+# Backend Frameworks
+Node.js
+Express
+FastAPI
+Django
+Flask
+Spring Boot
+Laravel
+Swing
+Hibernate
+
+# Veritabanları
+MongoDB
+PostgreSQL
+MySQL
+Redis
+Elasticsearch
+Cassandra
+DynamoDB
+
+# Cloud & Hosting
+AWS
+Amazon Web Services
+Azure
+Google Cloud
+GCP
+cloud computing
+bulut bilişim
+serverless
+lambda function
+
+# Versiyon Kontrol
+Git
+GitHub
+GitLab
+Bitbucket
+repository
+depo
+commit
+push
+pull
+merge
+branch
+dal
+rebase
+cherry pick
+stash
+
+# Testing
+unit test
+birim test
+integration test
+entegrasyon testi
+end-to-end test
+test coverage
+mock
+stub
+TDD
+test driven development
+
+# Code Quality
+refactoring
+yeniden düzenleme
+code review
+debugging
+hata ayıklama
+linting
+formatting
+best practices
+
+# Agile & PM
+Agile
+Scrum
+Kanban
+sprint
+backlog
+user story
+epic
+task
+bug
+feature
+debug
+
+# Diğer Önemli Terimler
+open source
+açık kaynak
+dependency
+bağımlılık
+package manager
+npm
+yarn
+pip
+composer
+build tool
+webpack
+vite
+rollup
+babel
+transpiler
+compiler
+derleyici
+runtime
+async
+asynchronous
+synchronous
+callback
+promise
+async await
+event loop
+thread
+process
+memory leak
+garbage collection
+çöp toplama
+performance
+performans
+optimization
+optimizasyon
+scalability
+ölçeklenebilirlik
+load balancing
+yük dengeleme
+caching strategy
+design pattern
+tasarım deseni
+singleton
+factory
+observer
+MVC
+MVVM
+OOP
+object oriented programming
+functional programming
+fonksiyonel programlama
+senkronizasyon
+asenkron
+MCP
+model
+### Veri Bilimi ve Makine Öğrenimi (Data Science & Machine Learning)
+Algorithm
+Artificial Intelligence (AI)
+Big Data
+Classification
+Clustering
+Computer Vision
+Cross Validation
+Data Mining
+Data Science
+Deep Learning
+Decision Trees
+Dimensionality Reduction
+Feature Engineering
+Generative AI
+Hyperparameter
+Large Language Models (LLMs)
+Machine Learning (ML)
+Model
+Natural Language Processing (NLP)
+Neural Networks
+Overfitting
+Predictive Analytics
+Regression
+Reinforcement Learning
+Regularization
+Supervised Learning
+Support Vector Machines (SVM)
+Training Data
+Test Data
+Underfitting
+Unsupervised Learning
+Validation
+
+### Kullanıcı Arayüzü ve Kullanıcı Deneyimi (UI/UX Design)
+A/B Testing
+Accessibility
+Adaptive Design
+Card Sorting
+Cognitive Load
+Color Theory
+Fitts's Law
+Flat Design
+Grid System
+Hick's Law
+Information Architecture (IA)
+Interaction Design (IxD)
+Jakob's Law
+Material Design
+Microinteractions
+Mobile-First Design
+Onboarding
+Prototype
+Responsive Design
+Sitemap
+Skeuomorphism
+Typography
+Usability
+User Experience (UX)
+User Flow
+User Interface (UI)
+User Journey
+User Persona
+User Research
+Wireframe
+
+### Siber Güvenlik ve Ağ (Cybersecurity & Networking)
+Cryptography
+Decryption
+Denial of Service (DoS)
+Digital Signature
+DNS (Domain Name System)
+Encryption
+Firewall
+Intrusion Detection System (IDS)
+Intrusion Prevention System (IPS)
+IP Address
+LAN (Local Area Network)
+MAC Address
+Malware
+OSI Model
+Packet
+Penetration Testing
+Phishing
+Port
+Proxy Server
+Router
+Switch
+TCP/IP
+VPN (Virtual Private Network)
+Vulnerability
+WAN (Wide Area Network)
+Zero-Day Exploit
+
+### Yazılım Geliştirme Yaşam Döngüsü (SDLC) ve Kalite Güvencesi (QA)
+Abstraction
+Acceptance Testing
+Alpha Testing
+Beta Testing
+Cohesion
+Coupling
+Encapsulation
+General Availability (GA)
+Gold Master (GM) / Release to Manufacturing (RTM)
+Legacy Code
+Maintenance
+Modularity
+Performance Testing
+Quality Assurance (QA)
+Regression Testing
+Release Candidate
+Requirements Engineering
+Reusability
+Software Architecture
+Software Development Life Cycle (SDLC)
+Stable Release
+System Integration Testing (SIT)
+User Acceptance Testing (UAT)
+
+### Programlama ve Bilgisayar Biliminin Temelleri
+Argument
+Binary Code
+Class
+Command-Line Interface (CLI)
+Compiler
+Data Structures
+Executable Code
+Hardcoding
+High-Level Language
+Interpreter
+Low-Level Language
+Machine Code
+Markup Language
+Method
+Object
+Open Source
+Operating System
+Parameter
+Pseudocode
+Scripting Language
+Source Code
+Terminal
+Variable
+
+### Eğlenceli ve Argo Terimler (Fun & Slang)
+Banana banana banana
+Common Law Feature
+Egyptian Brackets
+Higgs-Bugson
+Hindenbug
+Hooker code
+Hydra Code
+Jenga Code
+Jimmy
+Loch Ness Monster Bug
+Mad girlfriend bug
+Rubberducking
+Smug Report
+Unicorny
+Yoda Conditions
+.com
+Menü
+API'den
+API'de
